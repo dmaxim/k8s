@@ -1,0 +1,45 @@
+{
+    "apiVersion": "vlabs",
+    "properties": {
+      "orchestratorProfile": {
+        "orchestratorType": "Kubernetes",
+        "orchestratorVersion" : "1.15.3"
+      },
+      "masterProfile": {
+        "count": 1,
+        "dnsPrefix": "mxinfok8s",
+        "vmSize": "Standard_B1ms"
+      },
+      "agentPoolProfiles": [
+        {
+          "name": "mxk8s1",
+          "count": 1,
+          "vmSize": "Standard_D2_v2",
+          "osType" : "Linux",
+          "storageProfile" : "ManagedDisks"
+        },
+        {
+            "name" : "mxk8s2",
+            "count" : 1,
+            "vmSize": "Standard_D2_v2", 
+            "osType" : "Linux",
+            "storageProfile": "ManagedDisks"
+        }
+      ],
+      "linuxProfile": {
+        "adminUsername": "dmadmin",
+        "ssh": {
+          "publicKeys": [
+            {
+              "keyData": "ssh-rsa "
+            }
+          ]
+        }
+      },
+      "servicePrincipalProfile": {
+        "clientId": "23869f8c-faf2-4d49-812d-d146351bd7ab",
+        "secret": ""
+      }
+    }
+  }
+  
