@@ -11,3 +11,13 @@ variable "resource-group" {
     type = string
     description = "Resource Group name"
 }
+
+variable "location" {}
+
+variable "environment" {}
+
+variable "ak-engine-application" {}
+
+variable "ak-engine-app-identifier" {}
+
+variable "ak-engine-service-principal-secret" {}
